@@ -22,7 +22,7 @@ class Item extends React.Component{
                 <div className="item"> 
                     <div className="estrellas">
                         {
-                            this.state.estrellas.map(x =>
+                            this.state.estrellas.map(t =>
                                 <span>★</span>
                                 )
                         }

@@ -1,9 +1,10 @@
 import React from 'react'
 
 
-function PanelAgregar (){
+function PanelAgregar (props){
 	return(
-			<div>laevublaublurbvlkurvb</div>
+			<div>laevublaublurbvlkurvb <button onClick={props.cancelar}>Cancelar</button></div>
+			
 
 		)
 }

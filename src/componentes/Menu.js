@@ -11,13 +11,20 @@ class Menu extends React.Component{
 
 			this.state={panelAgregar:false}
 
-			this.add = this.add.bind(this);
+			/*this.add = this.add.bind(this);*/
 		}
 	
 	
-		add(){
+		add = (e) => {
+			e.preventDefault();
 			this.setState({panelAgregar:true})
 		}
+
+		cancelar = (e)=>{
+			e.preventDefault();
+			this.setState({panelAgregar:false})
+		}
+
 		render(){
 			return(
 					<div>
@@ -37,7 +44,7 @@ class Menu extends React.Component{
 
 						{  /* esta es una forma particular del if */
 							(this.state.panelAgregar)?
-							<PanelAgregar/>
+							<PanelAgregar cancelar={this.cancelar}/> //(mandar a llamar al prop)aca tengo que definir "cancelar" que se trae desde el elemento PanelAgregar
 							:
 							" " 
 											
