@@ -14,6 +14,8 @@ function List (props){
 						titulo={item.titulo}
 						genero={item.genero}
 						imagen={item.imagen}
+
+						borrar={props.borrar}
 						/>
 						)
 				 }

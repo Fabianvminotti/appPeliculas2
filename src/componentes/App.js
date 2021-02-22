@@ -89,13 +89,22 @@ class App extends React.Component{
 	  }
 
 
+	  borrarPeli=(id)=>{ //trabaja con el id seleccionado en el componente de Item
+		var temp = [...this.state.pelis]; //crea una variable temporal con las peliculas actuales
+		const res2 = temp.filter(item => item.id != id); //crea una respuesta con todas las peliculas actuales menos las del id seleccionado
+		this.setState({pelis: [...res2]});//genera un nuevo estado para la lista de peliculas
+		this.copiarData();//arregla la data para que no aprezca en las buscquedas
+	  }
+
 
 
 	render(){
 		return(
 				<div className="app">
 					<Menu  onadd={this.onAdd} buscando={this.onSearch} />
-					<List items={this.state.copiaPelis}/>
+					<List items={this.state.copiaPelis}
+						  borrar={this.borrarPeli}	
+					/>
 				</div>
 
 			)

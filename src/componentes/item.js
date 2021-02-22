@@ -17,6 +17,11 @@ class Item extends React.Component{
     })
     }      
 
+    borrar=()=>{
+        console.log(this.props.id);
+        this.props.borrar(this.props.id);
+    }
+
     render(){
         return(
                 <div className="item"> 
@@ -31,6 +36,7 @@ class Item extends React.Component{
                     <img src={this.props.imagen}/>
                     <p>{this.props.descripcion}</p>
                     <div>{this.props.genero}</div>
+                    <button onClick={this.borrar} >Eliminar</button>
                 </div>
 
             )
