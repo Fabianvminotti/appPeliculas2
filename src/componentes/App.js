@@ -47,10 +47,20 @@ class App extends React.Component{
 	}
 
 
+	onAdd= (item)=>{
+		let temp =[...this.state.pelis] //esto es un operador de propagacion de ECMAscript 6 (googlear)
+		const id= temp[temp.length-1].id+1   //esto selecciona el id del ultimo elemento y le suma 1(para el id del proximo elemento que se agrega)
+		item['id'] = id;
+		temp.push(item);
+
+		this.setState({pelis:[...temp]})
+
+	}
+
 	render(){
 		return(
 				<div className="app">
-					<Menu/>
+					<Menu  onadd={this.onAdd} />
 					<List items={this.state.pelis}/>
 				</div>
 

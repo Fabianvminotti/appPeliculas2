@@ -9,27 +9,43 @@ class PanelAgregar extends React.Component{
 		this.state={
 			titulo:"",
 			desc:"",
-			calif:1,
-			Img:""
+			rating:1,
+			imagen:""
 		};
 		
         
     }
 
 	setCalificacion = (e) =>{
-		this.setState({calif: e.target.setCalificacion})
+		this.setState({calif: e.target.value})
 	}
 
 	setTitulo = (e) =>{
-		this.setState({titulo: e.target.setTitulo})
+		this.setState({titulo: e.target.value})
 	}
 
-	setImg = (e) =>{
-		this.setState({img: e.target.setImg})
+	setimagen = (e) =>{
+		this.setState({imagen: e.target.value})
 	}
 
 	setDescripcion = (e) =>{
-		this.setState({desc: e.target.setDescripcion})
+		this.setState({desc: e.target.value})
+	}
+
+
+	onSubmit = (e) =>{
+		e.preventDefault();
+
+		const titulo = this.state.titulo;
+		const desc =  this.state.desc;
+		const rating = this.state.rating;
+		const imagen = this.state.imagen;
+
+		this.props.onadd({titulo:titulo, imagen:imagen, rating:rating})
+		
+
+			
+
 	}
 
 
@@ -41,7 +57,7 @@ class PanelAgregar extends React.Component{
 	render(){
 			return(
 					<div className="addPelicula-contenedor">
-					<form className="addPelicula">
+					<form onSubmit={this.onSubmit} className="addPelicula">
 						<p>Titulo</p>
 						<input onChange={this.setTitulo} ></input>
 						<p>Descripcion</p>
@@ -50,12 +66,14 @@ class PanelAgregar extends React.Component{
 						<input type="range"  min="1" max="5" id="range" onChange={this.setCalificacion}></input> 
 						
 						<p>Imagen</p>
-						<input  placeholder="Insetar la URL" onChange={this.setImg} ></input>
+						<input  placeholder="Insetar la URL" onChange={this.setimagen} ></input>
+						<input type="submit" value="Registrar libro"/>
+
 					</form>	
 						
 						
-						<button onClick={this.props.agregar}>Agregar</button>
-						<button onClick={this.props.cancelar}>Cancelar</button>
+						{/* <button onClick={this.props.agregar}>Agregar</button> */}
+						<button onClick={this.props.cancelar}>Cerrar</button>
 					</div>
 					
 

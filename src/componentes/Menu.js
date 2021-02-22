@@ -25,22 +25,7 @@ class Menu extends React.Component{
 			this.setState({panelAgregar:false})
 		}
 
-		agregar = (e)=>{
-			e.preventDefault();
-			this.setState({panelAgregar:false})
-
-			const titulo = this.state.titulo;
-			const desc =  this.state.desc;
-			const calif = this.state.calif;
-			const Img = this.state.img;
-
-			this.props.agregarAux({titulo:titulo,
-								desc:desc,
-								calif:calif,
-								Img:Img})
-
-
-		}
+		
 
 		render(){
 			return(
@@ -60,7 +45,7 @@ class Menu extends React.Component{
 						</div>
 						{  /* esta es una forma particular del if */
 							(this.state.panelAgregar)?
-							<PanelAgregar cancelar={this.cancelar} agregar={this.agregar}/> //(mandar a llamar al prop)aca tengo que definir "cancelar" que se trae desde el elemento PanelAgregar
+							<PanelAgregar cancelar={this.cancelar} onadd={this.props.onadd}/> //(mandar a llamar al prop)aca tengo que definir "cancelar" que se trae desde el elemento PanelAgregar
 							:
 							" " 
 						}
