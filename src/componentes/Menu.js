@@ -36,7 +36,7 @@ class Menu extends React.Component{
 							</div>
 
 							<div className="buscar">
-								<Buscar/>
+								<Buscar buscando={this.props.buscando} />
 							</div>
 
 							<div className="boton">

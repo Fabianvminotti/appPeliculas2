@@ -39,7 +39,9 @@ class App extends React.Component{
 					"genero":"comedia ",
 					"imagen":"https://cinefiloserial.com.ar/wp-content/uploads/2018/05/esperando-la-carroza-800x445.jpg"
 				}
-			]
+			],
+
+			copiaPelis:[]
 		}
 
 
@@ -54,14 +56,46 @@ class App extends React.Component{
 		temp.push(item);
 
 		this.setState({pelis:[...temp]})
+		this.copiarData()
 
 	}
+
+
+	copiarData=()=>{ //cada vez que se ejecute esta fucion se va a realizar una copia del arrar pelis
+		this.setState((state,props) => ({
+			copiaPelis: [...state.pelis]
+		}));
+	  }
+	
+	  componentDidMount=()=>{
+		this.copiarData();
+	  }
+	
+	  onSearch=(query)=>{
+		if(query === ''){//si el query esta vacio deja la data asi como esta
+		  this.setState({copiaPelis: [...this.state.pelis]});
+		}else{
+	
+		  const temp = [...this.state.pelis];
+		  var res = [];
+		  temp.forEach(item =>{
+			if(item.titulo.toLowerCase().indexOf(query) > -1){
+			  res.push(item);
+			}
+		  });
+		
+		  this.setState({copiaPelis: [...res]});
+		}
+	  }
+
+
+
 
 	render(){
 		return(
 				<div className="app">
-					<Menu  onadd={this.onAdd} />
-					<List items={this.state.pelis}/>
+					<Menu  onadd={this.onAdd} buscando={this.onSearch} />
+					<List items={this.state.copiaPelis}/>
 				</div>
 
 			)
