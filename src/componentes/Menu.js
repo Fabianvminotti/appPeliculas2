@@ -32,7 +32,7 @@ class Menu extends React.Component{
 					<div>
 						<div className="menu">
 							<div className="logo">
-
+								<img src="https://i.ibb.co/qWrdR09/logofondo.png" />
 							</div>
 
 							<div className="buscar">

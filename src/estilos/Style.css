@@ -1,98 +1,19 @@
 
-
-.tarjeta{
-	display: inline-block;
-	background: linear-gradient(70deg, gray, white);
-	height: 500px;
-	width: 250px;
-	border-radius: 5px;
-	overflow: hidden;
-	margin: 20px;
-}
-
-.tarjeta h2 {
-	font-family: sans-serif;
-	text-align: center;
-
-}
-
-.tarjeta img{
-	height: 250px;
-
-}
-.desc{
-	font-family: sans-serif;
-	text-align: center;
-	padding: 5px;
-}
-
-.genero{
-	font-family: sans-serif;
-	text-align: center;
-	font-style: italic;
-	color: gray;
-}
-
-.agregar{
-	display: inline-block;
-	background: linear-gradient(70deg, gray, white);
-	height: 100px;
-	width: 100px;
-	border-radius: 50%;
-	overflow: hidden;
-	margin: 20px;
-	color: white;
-	text-align: center;
-	
-	margin: 220px 95px 220px 95px;
-	
-	
-	
-}
-
-.agregar button{
-	background-color: transparent;
-	border-style: none;
-	line-height: 100px;
-	font-size: 50px;
-	height: 100px;
-	width: 100px;
-	border-radius: 50%;
-	cursor: pointer;
-
-}
-
-.contSec{
-	height: 450px;
-}
-
-
-
-.calif{
-	bottom:0px;
-	
-	vertical-align: bottom;
-	border-radius: 7px;
-
-}
-
-.calif select{
-	background-color: transparent;
-	font-family: sans-serif;
-	width: 150px;
-	margin: 0px 50px 0px 50px;
-
-}
-
-
-
-
-
-.contenedorTarjetas{
-	
-	
+body{
+	background-color:  #E0DFD5;;
 }
 
 .menu{
-	background-color: blue;
+
+	display: flex;
+	
+}
+
+
+.menu img{
+	height: 30px;
+}
+
+.menu input{
+	margin: 0px 10px 0px 10px;
 }
