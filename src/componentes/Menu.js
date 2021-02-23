@@ -29,7 +29,7 @@ class Menu extends React.Component{
 
 		render(){
 			return(
-					<div>
+					<div className="contMenu">
 						<div className="menu">
 							<div className="logo">
 								<img src="https://i.ibb.co/CsgPxxC/logofondo2.png" />

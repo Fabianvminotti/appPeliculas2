@@ -152,7 +152,8 @@ body{
 
 	position: fixed;
 	top: 100px;
-	
+	left: 50%;
+	margin-left: -165px;
 	
 }
 
@@ -191,4 +192,8 @@ body{
 .addPelicula form input[type='range']{
 	color: red;
 	background-color: red;
+}
+
+.contMenu{
+	width: 100%;
 }
