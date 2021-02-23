@@ -1,5 +1,10 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
+
+
 
 class Item extends React.Component{
 
@@ -36,7 +41,7 @@ class Item extends React.Component{
                     <img src={this.props.imagen}/>
                     <p>{this.props.descripcion}</p>
                     <div>{this.props.genero}</div>
-                    <button onClick={this.borrar} >Eliminar</button>
+                    <button onClick={this.borrar} ><FontAwesomeIcon icon={faTrash}/>  </button>
                 </div>
 
             )

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 class PanelAgregar extends React.Component{
 	
@@ -56,7 +58,7 @@ class PanelAgregar extends React.Component{
 
 	render(){
 			return(
-					<div className="addPelicula-contenedor">
+					<div className="addPelicula">
 					<form onSubmit={this.onSubmit} className="addPelicula">
 						<p>Titulo</p>
 						<input onChange={this.setTitulo} ></input>
@@ -67,13 +69,17 @@ class PanelAgregar extends React.Component{
 						
 						<p>Imagen</p>
 						<input  placeholder="Insetar la URL" onChange={this.setimagen} ></input>
-						<input type="submit" value="Registrar libro"/>
+						
+						<div className="actions">	
+							<input type="submit" value="Agregar"></input>
+							<button onClick={this.props.cancelar}> <FontAwesomeIcon icon={faTimes}/>     </button>
+						</div>
 
 					</form>	
 						
 						
 						{/* <button onClick={this.props.agregar}>Agregar</button> */}
-						<button onClick={this.props.cancelar}>Cerrar</button>
+						
 					</div>
 					
 

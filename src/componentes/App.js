@@ -13,7 +13,7 @@ class App extends React.Component{
 				{
 					"id":"1" ,
 					"rating":"5",
-					"descripcion":"Un grupo de cuatro personas resuelve problemas",
+					"descripcion":"Un grupo de cuatro personas resuelve problemas comunes a la gente comun con sofisticados simulacros",
 					"titulo":"Los simuladores",
 					"genero":"suspenso",
 					"imagen" : "https://www.infobae.com/new-resizer/lzXKAB6sDdWSAL6QzWTB_BP-G9E=/420x236/filters:format(jpg):quality(85)//arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/LS3BQREYLJFCPD5EGVXASETLVM.jpg"

@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 
 class Buscar extends React.Component{
@@ -13,9 +15,13 @@ buscandoEvento = (e)=>{
 
 }
 
-render(){
+render(){ 
 	return(
-			<input type="text"  onChange={this.buscandoEvento}/>
+			<input type="text" placeholder="Buscar" onChange={this.buscandoEvento}>  
+			
+			</input>
+
+			
 
 		)
 }

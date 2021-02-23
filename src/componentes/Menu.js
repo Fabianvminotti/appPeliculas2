@@ -32,7 +32,7 @@ class Menu extends React.Component{
 					<div>
 						<div className="menu">
 							<div className="logo">
-								<img src="https://i.ibb.co/qWrdR09/logofondo.png" />
+								<img src="https://i.ibb.co/CsgPxxC/logofondo2.png" />
 							</div>
 
 							<div className="buscar">
@@ -40,7 +40,7 @@ class Menu extends React.Component{
 							</div>
 
 							<div className="boton">
-								<button onClick={this.add} className="agregar">Nuevo libro</button>
+								<button onClick={this.add} className="agregar">+ Agregar Pelicula</button>
 							</div>
 						</div>
 						{  /* esta es una forma particular del if */
